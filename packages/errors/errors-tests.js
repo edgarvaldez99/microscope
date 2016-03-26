@@ -12,7 +12,7 @@ Tinytest.addAsync("Errors - template", function(test, done) {
 	test.equal(Errors.collection.find({}).count(), 1);
 
 	// render the template
-	UI.insert(UI.render(Template.meteorErrors), document.body);
+	Blaze.render(Template.meteorErrors, document.body);
 
 	Meteor.setTimeout(
 		function() {
